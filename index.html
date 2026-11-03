@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Um jogo de aventura em que suas escolhas ajudam a encontrar um animal perdido na floresta.">
+  <title>A Trilha do Reencontro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game-shell">
+    <header class="site-header">
+      <p class="eyebrow">JOGO DE ESCOLHAS</p>
+      <h1>A Trilha do Reencontro</h1>
+    </header>
+
+    <section id="tela-inicial" class="screen">
+      <h2>Uma busca na floresta</h2>
+      <p>Seu animal de estimação desapareceu na floresta. Explore o caminho, encontre pistas e use os recursos com cuidado para tentar voltar para casa em segurança.</p>
+      <button id="botao-iniciar" class="primary-button">Iniciar jogo</button>
+    </section>
+
+    <section id="tela-historia" class="screen" hidden>
+      <div class="phase-meta">
+        <span id="numero-fase">Fase 1</span>
+        <span id="inventario-resumo">Recursos: água e lanterna</span>
+      </div>
+      <h2 id="titulo-fase"></h2>
+      <p id="texto-fase" class="story-text"></p>
+      <div id="opcoes" class="choices"></div>
+      <p id="mensagem-recursos" class="resource-note" aria-live="polite"></p>
+    </section>
+
+    <section id="tela-vitoria" class="screen ending" hidden>
+      <p class="eyebrow">FINAL</p>
+      <h2>Você conseguiu!</h2>
+      <p>Você acalma seu animal com um pouco de água e o liberta cuidadosamente dos galhos. Depois de uma longa busca, vocês conseguem sair da floresta e voltar para casa juntos.</p>
+      <button id="botao-voltar-vitoria" class="primary-button">Voltar ao início</button>
+    </section>
+
+    <section id="tela-derrota" class="screen ending" hidden>
+      <p class="eyebrow">FINAL</p>
+      <h2>Fim de jogo</h2>
+      <p>A tentativa apressada assusta o animal e os galhos se prendem ainda mais. Sem conseguir concluir o resgate antes do anoitecer, você precisa recuar e procurar ajuda. A busca termina por hoje.</p>
+      <button id="botao-reiniciar" class="primary-button">Jogar novamente</button>
+    </section>
+
+    <footer>
+      <p>Suas escolhas mudam o caminho da história.</p>
+    </footer>
+  </main>
+</body>
+</html>
